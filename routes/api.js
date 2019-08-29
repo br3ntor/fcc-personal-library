@@ -61,7 +61,7 @@ module.exports = function(app) {
         db.collection('library').deleteMany((err, reply) => {
           if (err) throw err;
           if (reply) {
-            res.send('Server: All books deleted.');
+            res.send('complete delete successful');
           }
         });
       });
