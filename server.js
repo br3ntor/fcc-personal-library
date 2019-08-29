@@ -13,7 +13,6 @@ const helmet = require('helmet');
 var app = express();
 
 app.use(helmet.noCache());
-// app.use(helmet.hidePoweredBy());
 app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }));
 
 app.use('/public', express.static(process.cwd() + '/public'));
@@ -34,7 +33,8 @@ fccTestingRoutes(app);
 
 //Routing for API 
 apiRoutes(app);  
-    
+
+// This gets moved to the end of apiRoutes
 //404 Not Found Middleware
 // app.use(function(req, res, next) {
 //   res.status(404)

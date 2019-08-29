@@ -100,6 +100,7 @@ $(document).ready(function() {
         //update list
         console.log(data);
         console.log('Success! Books confirmed deleted.');
+        itemsRaw = [];
         $('.listwrapper').empty();
       },
       error: function() {
